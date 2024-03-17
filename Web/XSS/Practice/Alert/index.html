@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple XSS</title>
+
+    <script>
+        function display() {
+            name = document.getElementById("name").value;
+            document.getElementById("welcome-text").innerHTML = "Hello " + name;
+        }
+    </script>
+</head>
+<body>
+    Enter your name: <input type="text" id="name"> <button type="submit" onclick="display()">Submit</button>
+
+    <div id="welcome-text"></div>
+    </div>
+</body>
+</html>
